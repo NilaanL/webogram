@@ -1014,7 +1014,7 @@ a.footer_link.active:active {
     line-height: 18px;
     height: 18px;
     border-radius: 0;
-    float: right;
+    // float: right;
     min-width: 0;
     margin-top: 5px;
     margin-left: 10px;
@@ -1249,11 +1249,11 @@ a.peer_select_modal_share_link {
 }
 
 .im_send_panel_wrap {
-  max-width: 554px;
+  max-width: 90%;
   padding-bottom: 21px;
 }
 .im_send_form {
-  max-width: 51vw;
+  // max-width: 51vw;
   left: 0px;
   right: 0px;
 }
@@ -1326,7 +1326,7 @@ a.im_panel_peer_photo .peer_initials {
 .composer_rich_textarea,
 .composer_textarea {
   overflow: none;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   border-radius: 0;
   border: 0;
   box-shadow: none;
@@ -1335,7 +1335,8 @@ a.im_panel_peer_photo .peer_initials {
   padding: 1px 28px 1px 0;
   position: relative;
   margin: 0;
-  min-height: 52px;
+  max-height:80px;
+  min-height: 30px;
   line-height: 20px;
   height: auto;
   box-sizing: border-box;
@@ -1355,13 +1356,22 @@ a.im_panel_peer_photo .peer_initials {
 .icon-paperclip {
   display: inline-block;
   width: 18px;
-  height: 17px;
+  height: 22px;
   vertical-align: top;
   opacity: 0.8;
   margin: 0;
-
-  .image-2x('../img/icons/General.png', 40px, 948px);
-  background-position: -11px -455px;
+  .image-2x('../img/icons/IconsetW.png', 42px, 1171px);
+  background-position: -13px -238px;
+}
+.icon-nilsend {
+  display: inline-block;
+  width: 24px;
+  height: 23px;
+  vertical-align: top;
+  opacity: 0.8;
+  margin: 0;
+  .image-2x('../img/icons/IconsetW.png', 42px, 1171px);
+  background-position: -16px -866px;
 }
 
 .im_attach {
@@ -1371,9 +1381,9 @@ a.im_panel_peer_photo .peer_initials {
   position: relative;
 
   width: 18px;
-  height: 17px;
+  height: 22px;
   margin-right: 28px;
-  margin-top: 6px;
+  margin-top: 2px;
 
   &:hover {
     .icon-paperclip {
@@ -1383,7 +1393,7 @@ a.im_panel_peer_photo .peer_initials {
 
   &:active {
     .icon-paperclip {
-      background-position: -11px -482px;
+      background-position: -13px -101px;
       opacity: 1;
     }
   }
@@ -1443,7 +1453,7 @@ a.im_panel_peer_photo .peer_initials {
 }
 .im_record_bg {
   position: absolute;
-  margin: -10px 0 0 -16px; 
+  margin: -10px 0 0 -28px; 
   padding: 13px 16px 13px 16px;
 
   width: 50px;
@@ -1451,7 +1461,7 @@ a.im_panel_peer_photo .peer_initials {
 
   border-radius: 50px;
   overflow: hidden;
-  background: #fff;
+  // background: #fff;
   transition: background-color linear 0.2s;
 
   .im_send_form_hover .im_voice_recording & {

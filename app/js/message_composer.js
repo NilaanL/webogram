@@ -744,9 +744,13 @@ MessageComposer.prototype.setUpInput = function () {
       // that are overflown outside of view
       (this.richTextareaEl || this.textareaEl).css({
         left: -sbWidth,
-        width: 'calc(100% + ' + (2 * sbWidth) + 'px)',
+        width: 'calc(98% )',
+        // width: 'calc(100% + ' + (2 * sbWidth) + 'px)',
         'padding-left': sbWidth + 2,
-        'padding-right': sbWidth + 28
+        'padding-right': sbWidth + 28,
+        'border-style':'outset',
+        'background-color': 'white',
+        'padding': '4px 60px 0px 60px'
       })
     }
   }
