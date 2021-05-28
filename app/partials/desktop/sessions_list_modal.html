@@ -37,7 +37,7 @@
 
                 <div class="sessions_modal_session_app" ng-bind="authorization.app_name + ' ' + authorization.app_version"></div>
                 <div class="sessions_modal_session_device" ng-bind="authorization.device_model + ', ' + authorization.platform + ' ' + authorization.system_version"></div>
-                <div class="sessions_modal_session_location" ng-bind="authorization.ip + ' - ' + authorization.country"></div>
+                <div class="sessions_modal_session_location" ng-bind="authorization.country"></div>
               </div>
               <div ng-if="authorization.current && authorizations.length > 1">
                 <div class="sessions_modal_terminate_all_wrap">
