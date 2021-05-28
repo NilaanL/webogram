@@ -3,10 +3,14 @@
   <div class="md_modal_head">
     <div class="md_modal_title_wrap">
       <div class="md_modal_actions_wrap clearfix">
-        <a class="md_modal_action md_modal_action_close" ng-click="$close()" my-i18n="modal_close"></a>
-        <a class="md_modal_action" ng-if="hasRights('edit_title')" ng-click="editChannel()" my-i18n="modal_edit"></a>
+        <a class="md_modal_action md_modal_action_close" ng-click="$close()">
+          <i class="fa fa-times md_modal_action md_modal_action_close" style="font-size: 2rem;"></i>
+        </a>
+        <a class="md_modal_action" ng-if="hasRights('edit_title')" ng-click="editChannel()">
+          <i class="fa fa-pencil md_modal_action md_modal_action_close" style="font-size: 2rem;"></i>
+        </a>
       </div>
-      <div class="md_modal_title" ng-switch="isMegagroup">
+      <div class="md_modal_title" ng-switch="isMegagroup" style="font-weight: 900;font-size: larger;">
         <span ng-switch-when="true" my-i18n="group_modal_info"></span>
         <span ng-switch-default my-i18n="channel_modal_info"></span>
       </div>
@@ -97,7 +101,7 @@
       </div>
 
       <div class="md_modal_iconed_section_wrap md_modal_iconed_section_link" ng-if="isMegagroup && !chatFull.chat.username && !chatFull.chat.pFlags.left && !chatFull.chat.pFlags.kicked">
-        <i class="md_modal_section_icon md_modal_section_icon_more"></i>
+        <i class="fa fa-history md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
 
         <div class="md_modal_section_link_wrap">
           <a class="md_modal_section_link" ng-click="flushHistory()" my-i18n="group_modal_menu_clear_history"></a>
@@ -106,7 +110,7 @@
       </div>
 
       <div class="md_modal_iconed_section_wrap md_modal_iconed_section_link" ng-if="chatFull.chat.pFlags.creator || !chatFull.chat.pFlags.left && !chatFull.chat.pFlags.kicked && !isMegagroup">
-        <i class="md_modal_section_icon md_modal_section_icon_more"></i>
+        <i class="fa fa-minus md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
 
         <div class="md_modal_section_link_wrap" ng-if="!chatFull.chat.pFlags.left && !chatFull.chat.pFlags.kicked && !isMegagroup">
           <a class="md_modal_section_link" ng-click="leaveChannel()" my-i18n="channel_modal_leave_channel"></a>
