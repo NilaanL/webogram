@@ -5,7 +5,7 @@
   </div>
   <div class="tg_head_split">
 
-    <div class="tg_head_logo_wrap">
+    <div class="tg_head_logo_wrap" style="border-right-style: inset;border-right-color:lavender;border-right-width:3px;">
       <div class="tg_head_logo_dropdown dropdown" dropdown>
         <a class="tg_head_btn dropdown-toggle" dropdown-toggle>
           <span class="visually-hidden" my-i18n="head_mainmenu"></span>
@@ -57,6 +57,7 @@
             <span class="icon-bar"></span>
           </a>
           <ul class="dropdown-menu">
+            <li><a ng-click="toggleMedia('search')">Search</a></li>
             <li><a ng-click="toggleEdit()" my-i18n="head_select_messages"></a></li>
             <li class="divider ng-scope"></li>
             <li><a ng-click="toggleMedia('photos')" my-i18n="head_media_photos"></a></li>
@@ -71,9 +72,9 @@
           </ul>
         </div>
 
-        <a class="tg_head_btn tg_head_peer_search_btn" ng-click="toggleMedia('search')">
+        <!-- <a class="tg_head_btn tg_head_peer_search_btn" ng-click="toggleMedia('search')">
           <i class="icon icon-search"></i>
-        </a>
+        </a> -->
 
         <a class="tg_head_btn tg_head_peer_return_btn" ng-show="historyFilter.mediaType.length || historyState.skipped" ng-click="returnToRecent()" ng-switch="historyState.skipped">
           <span ng-switch-when="true" my-i18n="im_show_recent_messages"></span>

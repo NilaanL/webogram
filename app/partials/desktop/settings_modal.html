@@ -3,10 +3,14 @@
   <div class="md_modal_head">
     <div class="md_modal_title_wrap">
       <div class="md_modal_actions_wrap clearfix">
-        <a class="md_modal_action md_modal_action_close" ng-click="$close()" my-i18n="modal_close"></a>
-        <a class="md_modal_action" ng-click="editProfile()" my-i18n="modal_edit"></a>
+        <a class="md_modal_action md_modal_action_close" ng-click="$close()">
+          <i class="fa fa-times md_modal_action md_modal_action_close" style="font-size: 2rem;"></i>
+        </a>
+        <a class="md_modal_action" ng-click="editProfile()">
+          <i class="fa fa-pencil" style="font-size: 2rem;"></i>
+        </a>
       </div>
-      <div class="md_modal_title" my-i18n="settings_modal_title"></div>
+      <div class="md_modal_title" my-i18n="settings_modal_title" style="font-weight: 900;font-size: larger;"></div>
     </div>
 
     <div class="peer_modal_profile_wrap clearfix">
@@ -62,6 +66,7 @@
         </a>
 
         <a ng-if="notify.desktop && notify.pushAvailable" class="md_modal_section_toggle_wrap tg_checkbox" ng-click="togglePush()" ng-class="notify.push ? 'tg_checkbox_on' : ''">
+          <i class="fa fa-flag-o md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
           <span class="icon icon-checkbox-outer"><i class="icon-checkbox-inner"></i></span>
           <span class="tg_checkbox_label" my-i18n="settings_modal_pushes"></span>
         </a>
@@ -69,11 +74,13 @@
         
 
         <a class="md_modal_section_toggle_wrap tg_checkbox" ng-click="togglePreview()" ng-class="notify.preview ? 'tg_checkbox_on' : ''">
+          <i class="fa fa-comment-o md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
           <span class="icon icon-checkbox-outer"><i class="icon-checkbox-inner"></i></span>
           <span class="tg_checkbox_label" my-i18n="settings_modal_message_preview"></span>
         </a>
 
         <a class="md_modal_section_toggle_wrap tg_checkbox" ng-click="toggleSound()" ng-class="notify.volume ? 'tg_checkbox_on' : ''">
+          <i class="fa fa-volume-up md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
           <span class="icon icon-checkbox-outer"><i class="icon-checkbox-inner"></i></span>
           <span class="tg_checkbox_label" my-i18n="settings_modal_sound"></span>
         </a>
@@ -102,7 +109,7 @@
       </div>
 
       <div class="md_modal_iconed_section_wrap  md_modal_iconed_section_link">
-        <i class="md_modal_section_icon md_modal_section_icon_more"></i>
+        <i class="fa fa-language md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
 
         <div class="md_modal_section_select_wrap" ng-controller="AppLangSelectController">
           <div class="dropdown md_modal_section_select" dropdown>
@@ -118,6 +125,7 @@
         </div>
 
         <div class="md_modal_section_link_wrap">
+          <i class="fa fa-unlock-alt md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
           <a ng-if="password._ == 'account.noPassword' && password.email_unconfirmed_pattern.length" class="md_modal_section_link pull-right" ng-click="changePassword({action: 'cancel_email'})" my-i18n="settings_modal_password_email_pending_cancel">
           </a>
           <span class="md_modal_section_text" ng-if="password._ == 'account.noPassword' && password.email_unconfirmed_pattern.length" class="md_modal_section_link" my-i18n="settings_modal_password_email_pending">
@@ -131,6 +139,7 @@
           <a ng-if="password._ == 'account.password'" class="md_modal_section_link" ng-click="changePassword({action: 'change'})" my-i18n="settings_modal_change_password"></a>
         </div>
 
+        <i class="fa fa-eye-slash md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
         <a class="md_modal_section_toggle_wrap settings_modal_content_settings_wrap tg_checkbox" ng-click="toggleContentSettings()" ng-class="contentSettings.pFlags.sensitive_enabled ? 'tg_checkbox_on' : ''" ng-show="contentSettings.pFlags.sensitive_can_change">
           <span class="icon icon-checkbox-outer"><i class="icon-checkbox-inner"></i></span>
           <span class="tg_checkbox_label" my-i18n="settings_modal_show_sensitive_content"></span>
@@ -139,10 +148,12 @@
         
 
         <div class="md_modal_section_link_wrap">
+          <i class="fa fa-users md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
           <a class="md_modal_section_link" ng-click="showSessions()" my-i18n="settings_modal_active_sessions"></a>
         </div>
 
         <div class="md_modal_section_link_wrap">
+          <i class="fa fa-sign-out md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
           <a class="md_modal_section_link" ng-click="logOut()" my-i18n="head_log_out"></a>
         </div>
 
