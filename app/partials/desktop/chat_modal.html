@@ -3,10 +3,14 @@
   <div class="md_modal_head">
     <div class="md_modal_title_wrap">
       <div class="md_modal_actions_wrap clearfix">
-        <a class="md_modal_action md_modal_action_close" ng-click="$close()" my-i18n="modal_close"></a>
-        <a class="md_modal_action" ng-if="hasRights('edit_title')" ng-click="editTitle()" my-i18n="modal_edit"></a>
+        <a class="md_modal_action md_modal_action_close" ng-click="$close()">
+          <i class="fa fa-times md_modal_action md_modal_action_close" style="font-size: 2rem;"></i>
+        </a>
+        <a class="md_modal_action" ng-if="hasRights('edit_title')" ng-click="editTitle()">
+          <i class="fa fa-pencil" style="font-size: 2rem;margin-right: -5px;"></i>
+        </a>
       </div>
-      <div class="md_modal_title" my-i18n="group_modal_info"></div>
+      <div class="md_modal_title" my-i18n="group_modal_info" style="font-weight: 900;font-size: larger;"></div>
     </div>
 
     <div class="peer_modal_profile_wrap clearfix">
@@ -41,7 +45,7 @@
     <div class="md_modal_sections clearfix">
 
       <div class="md_modal_iconed_section_wrap md_modal_iconed_section_link" ng-if="hasRights('invite') && chatFull.participants.participants.length < maxParticipants">
-        <i class="md_modal_section_icon md_modal_section_icon_person"></i>
+        <i class="fa fa-user-plus md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
 
         <div class="md_modal_section_link_wrap">
           <a class="md_modal_section_link" ng-click="inviteToGroup()" my-i18n="group_modal_add_member"></a>
@@ -52,6 +56,7 @@
       <div class="md_modal_iconed_section_wrap  md_modal_iconed_section_link" ng-if="chatFull.chat._ != 'chatForbidden' && !chatFull.chat.pFlags.left && chatFull.chat.pFlags.creator">
 
         <div class="md_modal_section_link_wrap">
+          <i class="fa fa-envelope md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
           <a class="md_modal_section_link" ng-click="inviteViaLink()" my-i18n="group_modal_menu_share_link"></a>
         </div>
 
@@ -68,7 +73,7 @@
       </div>
 
       <div class="md_modal_iconed_section_wrap  md_modal_iconed_section_link">
-        <i class="md_modal_section_icon md_modal_section_icon_more"></i>
+        <i class="fa fa-history md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
 
         <div class="md_modal_section_link_wrap" ng-switch="chatFull.chat.pFlags.left || chatFull.chat.pFlags.kicked || chatFull.chat._ == 'chatForbidden'">
           <a ng-switch-when="true" class="md_modal_section_link" ng-click="flushHistory(false)" my-i18n="group_modal_menu_delete_group"></a>
@@ -80,6 +85,7 @@
       <div class="md_modal_iconed_section_wrap  md_modal_iconed_section_link" ng-if="chatFull.chat.pFlags.creator">
 
         <div class="md_modal_section_link_wrap">
+          <i class="fa fa-group md_modal_font_awesome_icon" style="font-size: 1.8rem; color:grey;"></i>
           <a class="md_modal_section_link" ng-click="migrateToSuperGroup()" my-i18n="group_modal_migrate_to_supergroup"></a>
         </div>
 
